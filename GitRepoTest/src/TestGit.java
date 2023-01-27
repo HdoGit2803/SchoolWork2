@@ -5,7 +5,8 @@ public class TestGit
 	public static void main(String[] args)
 	{
 
-		System.out.print("God");
+		System.out.println("Hello World");
+		System.out.println("Change It");
 
 	}
 
