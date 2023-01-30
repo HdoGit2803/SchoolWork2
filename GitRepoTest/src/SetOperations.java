@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public class SetOperation
+public class SetOperations
 {
-	public SetOperation()
+	public SetOperations()
 	{
 		
 	}
