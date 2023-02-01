@@ -7,8 +7,8 @@ public class DoorGameTest
 
 		DoorGame def = new DoorGame();
 		def.playGame();
-		System.out.println("Number of win if chaged choice " + def.getChange());
-		System.out.println("Number of win if choice stay " + def.getStay());
+		System.out.println("Percent of win if chaged choice " + def.getChange() + "%");
+		System.out.println("Percent of win if choice stayed " + def.getStay() + "%");
 
 	}
 
