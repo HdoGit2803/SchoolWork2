@@ -61,7 +61,7 @@ public class DoorGame
 	
 	public double getChange()
 	{
-		return changeW/10000;
+		return changeW/10000.;
 	}
 	public double getStay()
 	{
