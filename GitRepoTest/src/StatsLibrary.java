@@ -87,4 +87,48 @@ public class StatsLibrary
 		return Math.sqrt(calc);
 	}
 	
+	public double permutation(int n, int r)
+	{
+		double factN = 1;
+		double factNR = 1;
+		
+		for(int i = 1;i<=n;i++)
+		{
+			factN = factN*i;
+		}
+		
+		for(int i = 1;i<=(n-r);i++)
+		{
+			factNR = factNR*i;
+		}
+		
+		return factN/factNR;
+		
+	}
+	
+	public double combination(int n, int r)
+	{
+		double factN = 1;
+		double factNR = 1;
+		double factR = 1;
+		
+		for(int i = 1;i<=n;i++)
+		{
+			factN = factN*i;
+		}
+		
+		for(int i = 1;i<=(n-r);i++)
+		{
+			factNR = factNR*i;
+		}
+		
+		for(int i = 1;i<=r;i++)
+		{
+			factR = factR*i;
+		}
+		
+		return factN/(factR*factNR);
+		
+	}
+	
 }
