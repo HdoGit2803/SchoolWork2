@@ -20,7 +20,7 @@ public class DoorGame
 		int lose2;
 		int open;
 		Random rand = new Random();
-		for(int i = 0;i<10000;i++)
+		for(int i = 0;i<=10000;i++)
 		{
 			win = rand.nextInt(3);
 			lose1 = rand.nextInt(3);
