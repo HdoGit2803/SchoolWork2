@@ -32,7 +32,8 @@ public class Person
 						if(bDay[y] == bDay[x] && loop)
 						{
 							match++;	
-							loop = false;
+							y = student;
+							x = student;
 						}
 					}
 				}
