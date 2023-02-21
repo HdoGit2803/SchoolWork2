@@ -1,4 +1,4 @@
-
+import java.math.BigInteger;
 public class StatsLibrary
 {
 	public StatsLibrary()
@@ -87,47 +87,47 @@ public class StatsLibrary
 		return Math.sqrt(calc);
 	}
 	
-	public double permutation(int n, int r)
+	public BigInteger permutation(int n, int r)
 	{
-		double factN = 1;
-		double factNR = 1;
+		BigInteger factN = new BigInteger("1");
+		BigInteger factNR = new BigInteger("1");
 		
 		for(int i = 1;i<=n;i++)
 		{
-			factN = factN*i;
+			factN = factN.multiply(BigInteger.valueOf(i));
 		}
 		
 		for(int i = 1;i<=(n-r);i++)
 		{
-			factNR = factNR*i;
+			factNR = factNR.multiply(BigInteger.valueOf(i));
 		}
 		
-		return factN/factNR;
+		return factN.divide(factNR);
 		
 	}
 	
-	public double combination(int n, int r)
+	public BigInteger combination(int n, int r)
 	{
-		double factN = 1;
-		double factNR = 1;
-		double factR = 1;
+		BigInteger factN = new BigInteger("1");
+		BigInteger factNR = new BigInteger("1");
+		BigInteger factR = new BigInteger("1");
 		
 		for(int i = 1;i<=n;i++)
 		{
-			factN = factN*i;
+			factN = factN.multiply(BigInteger.valueOf(i));
 		}
 		
 		for(int i = 1;i<=(n-r);i++)
 		{
-			factNR = factNR*i;
+			factNR = factNR.multiply(BigInteger.valueOf(i));
 		}
 		
 		for(int i = 1;i<=r;i++)
 		{
-			factR = factR*i;
+			factR = factR.multiply(BigInteger.valueOf(i));
 		}
 		
-		return factN/(factR*factNR);
+		return factN.divide(factNR.multiply(factR));
 		
 	}
 	
