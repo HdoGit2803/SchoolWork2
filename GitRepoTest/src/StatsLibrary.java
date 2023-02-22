@@ -1,4 +1,4 @@
-import java.math.BigInteger;
+import java.math.*;
 public class StatsLibrary
 {
 	public StatsLibrary()
@@ -128,6 +128,37 @@ public class StatsLibrary
 		}
 		
 		return factN.divide(factNR.multiply(factR));
+		
+	}
+	
+	public BigDecimal binomialExact(int n, int y, double p)
+	{
+		BigDecimal comp = new BigDecimal(combination(n,y));
+		BigDecimal succ = new BigDecimal(p);
+		succ = succ.pow(y);
+		BigDecimal fail = new BigDecimal(1-p);
+		fail = fail.pow((n-y));
+		comp = comp.multiply(succ);
+		comp = comp.multiply(fail);
+		return comp.setScale(8,RoundingMode.CEILING);
+	}
+	public BigDecimal binomialAt(int n, int y, double p)
+	{
+		BigDecimal out = new BigDecimal(0);
+		for(int i = y; i<=n; i++)
+		{
+			BigDecimal comp = new BigDecimal(combination(n,i));
+			BigDecimal succ = new BigDecimal(p);
+			succ = succ.pow(i);
+			BigDecimal fail = new BigDecimal(1-p);
+			fail = fail.pow((n-i));
+			comp = comp.multiply(succ);
+			comp = comp.multiply(fail);
+			out = out.add(comp);
+		}
+		return out.setScale(8,RoundingMode.CEILING);
+		
+		
 		
 	}
 	

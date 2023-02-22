@@ -4,8 +4,10 @@ public class StatlLibraryTester
 	public static void main(String[] arg)
 	{
 		StatsLibrary def = new StatsLibrary();
-		System.out.println(def.permutation(99, 11));
-		System.out.println(def.combination(44, 11));
+		System.out.println(def.binomialExact(10, 7, .7));
+		System.out.println(def.binomialAt(10, 9, 0.3));
+		System.out.println(def.permutation(10, 9));
+		System.out.println(def.combination(10, 9));
 		
 	}
 }
