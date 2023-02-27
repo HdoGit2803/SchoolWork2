@@ -18,7 +18,6 @@ public class Person
 		Random rand = new Random();
 		for(int i = 0;i<=run;i++)
 		{
-			boolean loop = true;
 			int[] bDay =  new int[student];
 			for(int n = 0;n<student;n++)
 			{
@@ -29,7 +28,7 @@ public class Person
 				{
 					for(int x = y+1;x<student;x++)
 					{
-						if(bDay[y] == bDay[x] && loop)
+						if(bDay[y] == bDay[x])
 						{
 							match++;	
 							y = student;
