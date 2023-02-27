@@ -1,4 +1,3 @@
 # SchoolWork2
-Projects are all in GitRepoTest
-the LaptopGit folder is for my laptop repository just ignore that one
-Also the Person program is my birthday Program
+Also the Person program is my birthday Program \n
+Book1 is my Excel thing from the beginning of the semester
