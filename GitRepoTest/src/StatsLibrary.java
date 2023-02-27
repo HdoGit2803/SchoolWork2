@@ -177,6 +177,16 @@ public class StatsLibrary
 		}
 		return out.setScale(8,RoundingMode.CEILING);
 	}
+	
+	public BigDecimal geometric(double p,int y)
+	{
+		double q = 1-p;
+		BigDecimal Geo = new BigDecimal(q);
+		Geo = Geo.pow(y-1);
+		Geo = Geo.multiply(BigDecimal.valueOf(p));
+		return Geo.setScale(8,RoundingMode.CEILING);
+		
+	}
 
 	
 }

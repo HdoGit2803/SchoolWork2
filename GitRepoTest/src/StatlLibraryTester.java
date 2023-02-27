@@ -9,6 +9,7 @@ public class StatlLibraryTester
 		System.out.println(def.binomialAtMost(5, 1, 0.3));
 		System.out.println(def.permutation(10, 9));
 		System.out.println(def.combination(10, 9));
+		System.out.println(def.geometric(.3, 9));
 		
 	}
 }
