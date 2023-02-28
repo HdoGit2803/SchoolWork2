@@ -1,4 +1,4 @@
-import java.math.BigInteger;
+import java.math.*;
 public class StatlLibraryTester
 {
 	public static void main(String[] arg)
