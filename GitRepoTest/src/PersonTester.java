@@ -15,6 +15,6 @@ public class PersonTester
 		
 		Person per = new Person(student, run);
 		per.birthday();
-		System.out.print(per.prob()+"%");
+		System.out.print("Probability of 2 student sharing a birthday: " +per.prob()+"%");
 	}
 }
