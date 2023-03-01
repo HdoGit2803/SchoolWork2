@@ -6,11 +6,11 @@ public class Person
 	private double run;
 	private int student;
 
-	public Person(int s,int r)
+	public Person(int stu,int ru)
 	{
 		match = 0;
-		run = r;
-		student = s;
+		run = ru;
+		student = stu;
 	}
 	
 	public void birthday()

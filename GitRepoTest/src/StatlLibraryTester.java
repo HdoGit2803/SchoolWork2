@@ -6,7 +6,7 @@ public class StatlLibraryTester
 		int[] setA = {1,2,3,4};
 		int[] setB = {1,2,3,4,5,6};
 		int[] whole = {1,2,3,4,5,6,7,8};
-		double[] arr = {1,2,3,4,5};
+		double[] arr = {1,2,3,4,5,5};
 		
 		StatsLibrary def = new StatsLibrary();
 		

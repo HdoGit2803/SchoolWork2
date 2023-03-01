@@ -6,41 +6,41 @@ public class StatsLibrary
 	{
 		
 	}
-	public double mean(double[] find)
+	public double mean(double[] arr)
 	{
 		double total = 0;
-		for(int i = 0;i<find.length;i++)
+		for(int i = 0;i<arr.length;i++)
 		{
-			total += find[i];
+			total += arr[i];
 		}
-		return total/find.length;
+		return total/arr.length;
 	}
 	
-	public double median(double[] find)
+	public double median(double[] arr)
 	{
 		double med = 0;
-		if(find.length%2==0)
+		if(arr.length%2==0)
 		{
-			med = (find[find.length/2] + find[(find.length/2) - 1])/2;
+			med = (arr[arr.length/2] + arr[(arr.length/2) - 1])/2;
 		}
 		else
 		{
-			med = find[find.length/2];
+			med = arr[arr.length/2];
 		}
 		return med;
 	}
 	
-	public String mode(double[] find)
+	public String mode(double[] arr)
 	{
 		int index = 0;
 		int count = 0;
 		int max = 1;
 		int max2 = 0;
-		for(int i = 0;i<find.length;i++)
+		for(int i = 0;i<arr.length;i++)
 		{
-			for(int y = 0;y<find.length;y++)
+			for(int y = 0;y<arr.length;y++)
 			{
-				if(find[y] == find[i])
+				if(arr[y] == arr[i])
 				{
 					count++;
 				}
@@ -50,7 +50,7 @@ public class StatsLibrary
 				index = i;
 				max = count;
 			}
-			else if(count == max && find[i] != find[index])
+			else if(count == max && arr[i] != arr[index])
 			{
 				max2 = count;
 			}
@@ -62,29 +62,29 @@ public class StatsLibrary
 		}
 		else
 		{
-			String temp = String.valueOf(find[index]);
+			String temp = String.valueOf(arr[index]);
 			return temp;
 		}
 
 	}
 	
-	public double standard(double[] find)
+	public double standard(double[] arr)
 	{
 		double mean = 0;
 		double calc = 0;
 		
-		for(int i =0;i<find.length;i++)
+		for(int i =0;i<arr.length;i++)
 		{
-			mean += find[i];
+			mean += arr[i];
 		}
 		
-		mean = mean/find.length;
+		mean = mean/arr.length;
 		
-		for(int i =0;i<find.length;i++)
+		for(int i =0;i<arr.length;i++)
 		{
-			calc += (find[i] - mean)*(find[i] - mean);
+			calc += (arr[i] - mean)*(arr[i] - mean);
 		}
-		calc = calc/find.length;
+		calc = calc/arr.length;
 		return Math.sqrt(calc);
 	}
 	
@@ -147,9 +147,6 @@ public class StatsLibrary
 		return set;
 	}
 
-
-
-	
 	
 	
 	public BigInteger permutation(int n, int r)
