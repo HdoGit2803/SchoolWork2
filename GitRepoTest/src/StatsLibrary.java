@@ -199,14 +199,18 @@ public class StatsLibrary
 		BigDecimal succ = new BigDecimal(p);
 		succ = succ.pow(y);
 		BigDecimal fail = new BigDecimal(1-p);
+		
 		fail = fail.pow((n-y));
 		comp = comp.multiply(succ);
 		comp = comp.multiply(fail);
+		
 		return comp.setScale(8,RoundingMode.CEILING);
 	}
+	
 	public BigDecimal binomialAtLeast(int n, int y, double p)
 	{
 		BigDecimal out = new BigDecimal(0);
+		
 		for(int i = y; i<=n; i++)
 		{
 			BigDecimal comp = new BigDecimal(combination(n,i));
