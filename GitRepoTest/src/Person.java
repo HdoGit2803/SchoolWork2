@@ -1,4 +1,8 @@
-
+/*
+ * program that calculate the chances of 2 student in a classroom of x size having the same birthday
+ * after y trials
+ * where x and y are based on user input
+ */
 import java.util.Random;
 public class Person
 {
@@ -20,9 +24,8 @@ public class Person
 	
 	/*
 	 * method to tally if a class of x student will have 2 people with matching birthday
-	 * out of y trials where
+	 * out of y trials
 	 * @param bDay = an array that represent students in the class and their birthdays
-	 * @param
 	 */
 	public void birthday()
 	{

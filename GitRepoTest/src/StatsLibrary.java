@@ -1,3 +1,7 @@
+/*
+ * A Statistics Library with method that could be 
+ * used to solved Homework problem
+ */
 import java.math.*;
 import java.util.ArrayList;
 public class StatsLibrary
@@ -6,6 +10,12 @@ public class StatsLibrary
 	{
 		
 	}
+	
+	/*
+	 * take in an array of numbers than return their mean
+	 * @param arr = the array of numbers taken in
+	 * @param total = the total after all number in the array been added together
+	 */
 	public double mean(double[] arr)
 	{
 		double total = 0;
@@ -16,9 +26,15 @@ public class StatsLibrary
 		return total/arr.length;
 	}
 	
+	/*
+	 * take in an array of number then return the median
+	 * @param arr = the array of number taken in
+	 * @param med = the median
+	 */
 	public double median(double[] arr)
 	{
 		double med = 0;
+		//figures out whether the array is even in size or odd then decide the median based on that
 		if(arr.length%2==0)
 		{
 			med = (arr[arr.length/2] + arr[(arr.length/2) - 1])/2;
@@ -30,21 +46,41 @@ public class StatsLibrary
 		return med;
 	}
 	
+	/*
+	 * takes in an array of numbers then return the mode
+	 * return no mode if there are 2 or more numbers with the highest frequency
+	 * @param arr = the array filled with numbers taken in
+	 * @param index = index of where a number equal to the current mode is in the array
+	 * @param count = count how many duplicate of a number in the array
+	 * @param max = the current highest amount of duplicates in the array
+	 * @param max2 = check if the current max is truly the highest frequency
+	 */
 	public String mode(double[] arr)
 	{
 		int index = 0;
 		int count = 0;
 		int max = 1;
 		int max2 = 0;
+		
+		//goes through each element in the array
 		for(int i = 0;i<arr.length;i++)
 		{
+			//look at the following elements in the array and look for duplicates
 			for(int y = 0;y<arr.length;y++)
 			{
+				//if there a duplicate found then add 1 to count
 				if(arr[y] == arr[i])
 				{
 					count++;
 				}
 			}
+			/*
+			 * if count is greater the current greatest max
+			 * then index = i and max equal the current count
+			 * else if the current count is equal to the current max and 
+			 * the current number being counted is not the same as the current mode then
+			 * max2 = count
+			 */
 			if(count>max)
 			{
 				index = i;
@@ -56,6 +92,10 @@ public class StatsLibrary
 			}
 			count = 0;
 		}
+		/*
+		 * if max and max2 are the same then there no mode
+		 * else return the mode
+		 */
 		if(max == max2)
 		{
 			return "No mode";
@@ -67,6 +107,7 @@ public class StatsLibrary
 		}
 
 	}
+	
 	
 	public double standard(double[] arr)
 	{
