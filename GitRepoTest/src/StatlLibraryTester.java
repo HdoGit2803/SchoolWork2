@@ -6,7 +6,7 @@ public class StatlLibraryTester
 		int[] setA = {1,2,3,4};
 		int[] setB = {1,2,3,4,5,6};
 		int[] whole = {1,2,3,4,5,6,7,8};
-		double[] arr = {1,2,3,4,5,5};
+		double[] arr = {1,2,3,4,5};
 		
 		StatsLibrary def = new StatsLibrary();
 		
@@ -19,7 +19,6 @@ public class StatlLibraryTester
 		System.out.println("Union: "+def.union(setA, setB));
 		System.out.println("Complement: "+def.complement(setA, whole));
 
-		
 		
 		System.out.println("Binomial for Exactly: "+def.binomialExact(10, 7, .7));
 		System.out.println("Binomial for least: "+def.binomialAtLeast(10, 9, 0.3));
