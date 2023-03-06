@@ -17,7 +17,7 @@ public class MakeCSV
 					for(int i = 0;i<=100;i++)
 					{
 						double y = 1;
-						y = Math.pow(y, i)+2*i+1;
+						y = Math.pow(i, 2)+2*i+1;
 						write.print(i + "," + y);
 						write.println();
 						
